@@ -1,3 +1,21 @@
+Thanks to the original coder.  I've added a few options to improve captioning for EveryDream2 and limit the minigpt4 hallucinations.
+
+On the captioning side, the code breaks the caption into sentences and limits the number of sentences to three.  Through my experimentation, I've found that the third sentece usually describes the background of image. You may want to change line 174, to sentences = [s.strip() + '.' for s in sentences[:2]], if you prefer 2 sentence captions.
+
+The code also attempts to remove sentence fragments from the caption, but not always succeeeds. 
+
+The code also attempts to remove phrases in the caption that aren't descriptive, e.g. "The image shows" and "looking directly at the camera, etc." 
+There is an option to specify the identity of the person in a folder,  --name and the name of the person will be substituted for generic nouns like "woman" or "man." 
+
+On the image side, the  code checks if the image contains a transparency, and if it does, removes it and saves the image.
+You can also specify a target size for the images.  The default is 768 on the smaller side.  If the smaller side is less than 768, it will be resized, keeping the aspect ratio, and saved.  If the smaller side is greater than or equal to 768, the image will be unchanged.
+
+
+
+
+
+
+
 Welcome to the MiniGPT-4 Batch repo! This repository provides an implementation of MiniGPT-4 to mass caption Stable Diffusion images. It utilizes llama weights that are downloaded automatically if not already present. Please note that this implementation currently works only on Linux systems and runs only on high end machines (not the free colab).
 
 ## Windows Installation Instructions
