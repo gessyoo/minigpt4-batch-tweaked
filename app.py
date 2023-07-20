@@ -110,7 +110,11 @@ def describe_image(image_path, chat, chat_state, img, num_beams=3, temperature=1
 
     # Remove unnecessary phrases from the generated caption
     generated_caption = generated_caption.replace("The image shows", "").replace("The image is", "").replace("looking directly at the camera", "").replace("in the image", "").replace("taking a selfie", "").replace("posing for a picture", "").replace("holding a cellphone", "").replace("is wearing a pair of sunglasses", "").replace("pulled back in a ponytail", "").replace("with a large window in the cent", "")
-
+    generated_caption = generated_caption.replace("and there are no other people or objects in the scene..", ".")
+    generated_caption = generated_caption.replace(" and.", "")
+    generated_caption = generated_caption.replace("..", ".")
+    generated_caption = generated_caption.replace(" is.", "")  
+    
     # Split the caption into sentences
     sentences = generated_caption.split('. ')
 
