@@ -7,9 +7,11 @@ On the captioning side, the code breaks the caption into sentences and limits th
 The code also attempts to remove sentence fragments from the caption, but not always succeeeds. 
 
 The code also attempts to remove phrases in the caption that aren't descriptive, e.g. "The image shows" and "looking directly at the camera," etc.
-There is an option to specify the identity of the person in a folder,  --name and the name of the person will be substituted for generic nouns like "woman" or "man." 
 
-On the image side, the  code checks if the image contains a transparency, and if it does, removes it and saves the image.
+There is an option to specify the identity of the person in a folder, with  --name "John Smith" or whatever name you choose. The name of the person will be substituted for generic nouns like "woman" or "man." 
+
+On the image side, the  code checks if the image contains a transparency, and if it does, removes it and saves the image.  
+
 You can also specify a target size for the images.  The default is 768 on the smaller side.  If the smaller side is less than 768, it will be resized, keeping the aspect ratio, and saved.  If the smaller side is greater than or equal to 768, the image will be unchanged.
 
 
