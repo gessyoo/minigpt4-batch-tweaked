@@ -1,5 +1,7 @@
 Thanks to the original coder.  I've added a few options to improve captioning for EveryDream2 and limit the minigpt4 hallucinations.
 
+At the defailt beams of 8, each caption takes about 20 to 25 seconds to generate.
+
 On the captioning side, the code breaks the caption into sentences and limits the number of sentences to three.  Through my experimentation, I've found that the third sentece usually describes the background of image. You may want to change line 174, to sentences = [s.strip() + '.' for s in sentences[:2]], if you prefer 2 sentence captions.
 
 The code also attempts to remove sentence fragments from the caption, but not always succeeeds. 
