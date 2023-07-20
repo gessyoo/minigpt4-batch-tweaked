@@ -15,9 +15,7 @@ On the image side, the  code checks if the image contains a transparency, and if
 You can also specify a target size for the images.  The default is 768 on the smaller side.  If the smaller side is less than 768, it will be resized, keeping the aspect ratio, and saved.  If the smaller side is greater than or equal to 768, the image will be unchanged.
 
 
-
-
-
+__________________________________________________________________________________________________
 
 
 Welcome to the MiniGPT-4 Batch repo! This repository provides an implementation of MiniGPT-4 to mass caption Stable Diffusion images. It utilizes llama weights that are downloaded automatically if not already present. Please note that this implementation currently works only on Linux systems and runs only on high end machines (not the free colab).
