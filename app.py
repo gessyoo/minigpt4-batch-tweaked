@@ -104,7 +104,8 @@ def describe_image(image_path, chat, chat_state, img, num_beams=3, temperature=1
         max_length=2500
     )[0]
     
-    generated_caption = generated_caption.replace("The woman", args.name).replace("the woman", args.name).replace("a woman", args.name).replace("woman", args.name)  # Substitute the name
+    if args.name:
+        generated_caption = generated_caption.replace("The woman", args.name).replace("the woman", args.name).replace("a woman", args.name).replace("woman", args.name)  # Substitute the name
     if args.name2:
         generated_caption = generated_caption.replace("The man", args.name2).replace("a man", args.name2).replace("the man", args.name2)
 
